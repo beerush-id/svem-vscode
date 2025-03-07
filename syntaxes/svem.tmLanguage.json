@@ -1,0 +1,470 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Svem",
+  "scopeName": "text.svem",
+  "patterns": [
+    {
+      "include": "#scope"
+    }
+  ],
+  "repository": {
+    "scope": {
+      "patterns": [
+        {
+          "include": "#frontmatter"
+        },
+        {
+          "include": "#directive"
+        },
+        {
+          "include": "#svelte"
+        },
+        {
+          "include": "#markdown"
+        },
+        {
+          "include": "#html"
+        }
+      ]
+    },
+    "html": {
+      "patterns": [
+        {
+          "include": "#html-comment"
+        },
+        {
+          "include": "#html-tag"
+        },
+        {
+          "include": "#html-tag-inline"
+        },
+        {
+          "include": "#html-tag-closing"
+        }
+      ]
+    },
+    "svelte": {
+      "patterns": [
+        {
+          "include": "#svelte-module"
+        },
+        {
+          "include": "#svelte-script"
+        },
+        {
+          "include": "#svelte-tag"
+        },
+        {
+          "include": "#svelte-tag-single"
+        },
+        {
+          "include": "#svelte-tag-closing"
+        },
+        {
+          "include": "source.svelte#special-tags"
+        }
+      ]
+    },
+    "common": {
+      "patterns": [
+        {
+          "include": "#interpolation"
+        },
+        {
+          "include": "#event-assignment"
+        },
+        {
+          "include": "#attribute-assignment"
+        },
+        {
+          "include": "#attribute-pair"
+        },
+        {
+          "include": "#attribute"
+        }
+      ]
+    },
+    "html-comment": {
+      "begin": "(^|\\G)\\s*(<!--)",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.comment.html"
+        },
+        "2": {
+          "name": "punctuation.definition.comment.html"
+        }
+      },
+      "end": "(-->)",
+      "name": "comment.block.html"
+    },
+    "html-tag": {
+      "name": "meta.tag.svem",
+      "match": "(<)([a-z0-9\\-]+)((?:{[^}]*}|[^>])*)(\\/?>)",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html"
+        },
+        "3": {
+          "patterns": [
+            {
+              "include": "#interpolation"
+            },
+            {
+              "include": "#event-assignment"
+            },
+            {
+              "include": "#attribute-assignment"
+            },
+            {
+              "include": "#attribute-pair"
+            },
+            {
+              "include": "#attribute"
+            }
+          ]
+        },
+        "4": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      }
+    },
+    "html-tag-closing": {
+      "name": "meta.tag-closing.svem",
+      "match": "(</)([a-z0-9\\-]+)(>)",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      }
+    },
+    "svelte-module": {
+      "name": "meta.module.svem",
+      "patterns": [
+        {
+          "begin": "(<)(script)(\\s+lang=[\"']ts[\"'])(>)$",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "2": {
+              "name": "entity.name.tag.html"
+            },
+            "3": {
+              "patterns": [
+                {
+                  "include": "#attribute-pair"
+                },
+                {
+                  "include": "#attribute"
+                }
+              ]
+            },
+            "4": {
+              "name": "punctuation.definition.tag.end.html"
+            }
+          },
+          "end": "(</script>)",
+          "endCaptures": {
+            "1": {
+              "name": "entity.name.tag.script.html"
+            }
+          },
+          "patterns": [
+            {
+              "include": "source.ts"
+            }
+          ]
+        }
+      ]
+    },
+    "svelte-script": {
+      "name": "meta.script.svem",
+      "patterns": [
+        {
+          "begin": "(<)(script)(\\s+lang=[\"']js[\"'])?(>)$",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "2": {
+              "name": "entity.name.tag.html"
+            },
+            "3": {
+              "patterns": [
+                {
+                  "include": "#attribute-pair"
+                },
+                {
+                  "include": "#attribute"
+                }
+              ]
+            },
+            "4": {
+              "name": "punctuation.definition.tag.end.html"
+            }
+          },
+          "end": "(</script>)",
+          "endCaptures": {
+            "1": {
+              "name": "entity.name.tag.script.html"
+            }
+          },
+          "patterns": [
+            {
+              "include": "source.js"
+            }
+          ]
+        }
+      ]
+    },
+    "svelte-tag": {
+      "name": "meta.tag.svem",
+      "match": "(<)([A-Z][a-zA-Z0-9_.]+)((?:{[^}]*}|[^>])*)(\\/?>)",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "meta.tag.start.svelte"
+        },
+        "3": {
+          "patterns": [
+            {
+              "include": "#interpolation"
+            },
+            {
+              "include": "#event-assignment"
+            },
+            {
+              "include": "#attribute-assignment"
+            },
+            {
+              "include": "#attribute-pair"
+            },
+            {
+              "include": "#attribute"
+            }
+          ]
+        },
+        "4": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      }
+    },
+    "svelte-tag-closing": {
+      "name": "meta.tag-closing.svem",
+      "match": "(</)([A-Z][a-zA-Z0-9_.]+)(>)",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "meta.tag.start.svelte"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      }
+    },
+    "interpolation": {
+      "name": "meta.interpolation.svem",
+      "match": "(=)?(\\{)([^}]*)(\\})",
+      "captures": {
+        "1": {
+          "name": "keyword.operator.assignment.ts"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin"
+        },
+        "3": {
+          "patterns": [
+            {
+              "include": "source.ts"
+            }
+          ]
+        },
+        "4": {
+          "name": "punctuation.definition.string.end"
+        }
+      }
+    },
+    "attribute-assignment": {
+      "name": "meta.attribute_assignment.svem",
+      "match": "\\b(class|bind|style)(\\:)([a-zA-Z0-9\\-_]+)",
+      "captures": {
+        "1": {
+          "name": "variable.parameter"
+        },
+        "2": {
+          "name": "meta.type.annotation.ts"
+        },
+        "3": {
+          "name": "support.variable"
+        },
+        "4": {
+          "name": "keyword.operator.assignment.ts"
+        }
+      }
+    },
+    "attribute-pair": {
+      "name": "meta.attribute-pair.svem",
+      "match": "\\s([a-zA-Z0-9\\-_]+)(=)([\"'])(.*?)(\\3)",
+      "captures": {
+        "1": {
+          "name": "entity.other.attribute-name.html"
+        },
+        "2": {
+          "name": "keyword.operator.attribute-equals.html"
+        },
+        "3": {
+          "name": "punctuation.definition.string.begin"
+        },
+        "4": {
+          "name": "string.quoted.double.html"
+        },
+        "5": {
+          "name": "punctuation.definition.string.end"
+        }
+      }
+    },
+    "attribute": {
+      "name": "meta.attribute.svem",
+      "match": "\\s([a-zA-Z0-9\\-_]+)(?=\\s|$)",
+      "captures": {
+        "1": {
+          "name": "entity.other.attribute-name.html"
+        }
+      }
+    },
+    "event-assignment": {
+      "name": "meta.event-handling.svem",
+      "match": "\\b(on\\:?)([a-zA-Z0-9\\-_]+)(\\=)",
+      "captures": {
+        "1": {
+          "name": "keyword.operator.assignment.ts"
+        },
+        "2": {
+          "name": "entity.name.function"
+        },
+        "3": {
+          "name": "keyword.operator.assignment.ts"
+        },
+        "4": {
+          "name": "punctuation.definition.string.begin"
+        }
+      }
+    },
+    "markdown": {
+      "patterns": [
+        {
+          "include": "text.html.markdown#heading"
+        },
+        {
+          "include": "text.html.markdown#lists"
+        },
+        {
+          "include": "text.html.markdown#link-def"
+        },
+        {
+          "include": "text.html.markdown#blockquote"
+        },
+        {
+          "include": "text.html.markdown#hr"
+        },
+        {
+          "include": "text.html.markdown#meta"
+        },
+        {
+          "include": "text.html.markdown#raw"
+        },
+        {
+          "include": "text.html.markdown#table"
+        },
+        {
+          "include": "text.html.markdown#code"
+        },
+        {
+          "include": "text.html.markdown#emphasis"
+        },
+        {
+          "include": "text.html.markdown#strong"
+        },
+        {
+          "include": "text.html.markdown#strike"
+        },
+        {
+          "include": "text.html.markdown#inline"
+        },
+        {
+          "include": "text.html.markdown#entity"
+        },
+        {
+          "include": "text.html.markdown#punctuation"
+        }
+      ]
+    },
+    "frontmatter": {
+      "name": "meta.frontmatter.svem",
+      "begin": "^---$",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.tag.begin.html"
+        }
+      },
+      "end": "^---$",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.yaml"
+        }
+      ]
+    },
+    "directive": {
+      "name": "meta.directive.svem",
+      "patterns": [
+        {
+          "match": "^(:::)\\s*([a-zA-Z0-9\\-]+)(.*?)$",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "2": {
+              "name": "entity.name.tag.html"
+            },
+            "3": {
+              "patterns": [
+                {
+                  "include": "#attribute-pair"
+                },
+                {
+                  "include": "#attribute"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "match": "^(:::)$",
+          "captures": {
+            "0": {
+              "name": "punctuation.definition.tag.end.html"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "name": "svem",
+  "icon": "icons/svem-icon.png",
+  "displayName": "Svem for VS Code",
+  "description": "Language support for Svem (Svelte in Markdown).",
+  "version": "0.0.1",
+  "publisher": "Beerush",
+  "author": "Nanang Mahdaen El Agung <mahdaen@gmail.com>",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "main": "scripts/index.js",
+  "categories": [
+    "Programming Languages"
+  ],
+  "devDependencies": {
+    "vscode": "^1.1.37"
+  },
+  "activationEvents": [
+    "onLanguage:svem"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "svem",
+        "path": "./snippets/svem.code-snippets"
+      }
+    ],
+    "languages": [
+      {
+        "id": "svem",
+        "aliases": [
+          "Svem",
+          "svem",
+          "Svelte Markdown",
+          "svelte markdown",
+          "svex"
+        ],
+        "extensions": [
+          ".svem"
+        ],
+        "icon": {
+          "light": "./icons/svem-icon.svg",
+          "dark": "./icons/svem-icon.svg"
+        },
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "svem",
+        "scopeName": "text.svem",
+        "path": "./syntaxes/svem.tmLanguage.json",
+        "embeddedLanguages": {}
+      },
+      {
+        "scopeName": "text.svem.codeblock",
+        "path": "./syntaxes/svem-code-block.tmLanguage.json",
+        "injectTo": [
+          "text.svem"
+        ],
+        "embeddedLanguages": {
+          "source.js": "javascript",
+          "source.css": "css",
+          "source.svelte": "svelte",
+          "source.jsx": "javascriptreact",
+          "source.tsx": "typescriptreact",
+          "meta.embedded.block.svelte": "svelte",
+          "meta.embedded.block.html": "html",
+          "meta.embedded.block.frontmatter": "yaml",
+          "meta.embedded.block.css": "css",
+          "meta.embedded.block.ini": "ini",
+          "meta.embedded.block.java": "java",
+          "meta.embedded.block.lua": "lua",
+          "meta.embedded.block.makefile": "makefile",
+          "meta.embedded.block.perl": "perl",
+          "meta.embedded.block.r": "r",
+          "meta.embedded.block.ruby": "ruby",
+          "meta.embedded.block.php": "php",
+          "meta.embedded.block.sql": "sql",
+          "meta.embedded.block.vs_net": "vs_net",
+          "meta.embedded.block.xml": "xml",
+          "meta.embedded.block.xsl": "xsl",
+          "meta.embedded.block.yaml": "yaml",
+          "meta.embedded.block.dosbatch": "dosbatch",
+          "meta.embedded.block.clojure": "clojure",
+          "meta.embedded.block.coffee": "coffee",
+          "meta.embedded.block.c": "c",
+          "meta.embedded.block.cpp": "cpp",
+          "meta.embedded.block.diff": "diff",
+          "meta.embedded.block.dockerfile": "dockerfile",
+          "meta.embedded.block.go": "go",
+          "meta.embedded.block.groovy": "groovy",
+          "meta.embedded.block.pug": "jade",
+          "meta.embedded.block.javascript": "javascript",
+          "meta.embedded.block.javascriptreact": "javascriptreact",
+          "meta.embedded.block.json": "json",
+          "meta.embedded.block.jsonc": "jsonc",
+          "meta.embedded.block.latex": "latex",
+          "meta.embedded.block.less": "less",
+          "meta.embedded.block.objc": "objc",
+          "meta.embedded.block.scss": "scss",
+          "meta.embedded.block.perl6": "perl6",
+          "meta.embedded.block.powershell": "powershell",
+          "meta.embedded.block.python": "python",
+          "meta.embedded.block.rust": "rust",
+          "meta.embedded.block.scala": "scala",
+          "meta.embedded.block.shellscript": "shellscript",
+          "meta.embedded.block.typescript": "typescript",
+          "meta.embedded.block.typescriptreact": "typescriptreact",
+          "meta.embedded.block.csharp": "csharp",
+          "meta.embedded.block.fsharp": "fsharp"
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/beerush-id/svem-vscode.git"
+  },
+  "keywords": [
+    "svem",
+    "svx",
+    "svelte",
+    "markdown",
+    "svelte",
+    "in",
+    "markdown"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beerush-id/svem-vscode/issues"
+  },
+  "homepage": "https://github.com/beerush-id/svem-vscode#readme"
+}
