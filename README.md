@@ -4,7 +4,7 @@ This extension provides a syntax highlighting for the Svem (`Svelte in Markdown`
 
 ## What is Svem?
 
-Svem is a language that allows you to write Svelte components in Markdown files. It is a combination of Svelte and Markdown.
+[Svem](https://github.com/beerush-id/svem) is a preprocessor that allows you to write Svelte components in Markdown files. It is a combination of Svelte and Markdown.
 
 ### Svem Features
 
@@ -17,3 +17,11 @@ Svem is a language that allows you to write Svelte components in Markdown files.
 - Language support in inline code blocks.
 - Front Matter.
 - Layouts.
+
+## Todos
+
+- [ ] Intellisense
+- [ ] Code completion
+- [ ] Code navigation
+- [ ] Formatting
+- [ ] Linting

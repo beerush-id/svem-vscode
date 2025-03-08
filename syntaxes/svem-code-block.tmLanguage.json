@@ -156,7 +156,7 @@
       "begin": "(```)(javascript|js)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -183,7 +183,7 @@
       "begin": "(```)(typescript|ts)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -210,7 +210,7 @@
       "begin": "(```)(css)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -237,7 +237,7 @@
       "begin": "(```)(html)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -264,7 +264,7 @@
       "begin": "(```)(shell|bash|sh|zsh)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -291,7 +291,7 @@
       "begin": "(```)(python|py)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -318,7 +318,7 @@
       "begin": "(```)(markdown|md)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -345,7 +345,7 @@
       "begin": "(```)(svelte)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -378,7 +378,7 @@
       "begin": "(```)(jsx)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -405,7 +405,7 @@
       "begin": "(```)(tsx)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -432,7 +432,7 @@
       "begin": "(```)(ini)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -459,7 +459,7 @@
       "begin": "(```)(java)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -486,7 +486,7 @@
       "begin": "(```)(lua)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -513,7 +513,7 @@
       "begin": "(```)(makefile)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -540,7 +540,7 @@
       "begin": "(```)(perl)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -567,7 +567,7 @@
       "begin": "(```)(r)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -594,7 +594,7 @@
       "begin": "(```)(ruby)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -621,7 +621,7 @@
       "begin": "(```)(php)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -648,7 +648,7 @@
       "begin": "(```)(sql)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -675,7 +675,7 @@
       "begin": "(```)(vs_net)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -702,7 +702,7 @@
       "begin": "(```)(xml)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -729,7 +729,7 @@
       "begin": "(```)(xsl)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -756,7 +756,7 @@
       "begin": "(```)(dosbatch)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -783,7 +783,7 @@
       "begin": "(```)(clojure)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -810,7 +810,7 @@
       "begin": "(```)(coffee)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -837,7 +837,7 @@
       "begin": "(```)(c)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -864,7 +864,7 @@
       "begin": "(```)(cpp)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -891,7 +891,7 @@
       "begin": "(```)(diff)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -918,7 +918,7 @@
       "begin": "(```)(dockerfile)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -945,7 +945,7 @@
       "begin": "(```)(go)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -972,7 +972,7 @@
       "begin": "(```)(groovy)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -999,7 +999,7 @@
       "begin": "(```)(pug|jade)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1026,7 +1026,7 @@
       "begin": "(```)(json)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1053,7 +1053,7 @@
       "begin": "(```)(jsonc)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1080,7 +1080,7 @@
       "begin": "(```)(latex)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1107,7 +1107,7 @@
       "begin": "(```)(less)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1134,7 +1134,7 @@
       "begin": "(```)(objc)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1161,7 +1161,7 @@
       "begin": "(```)(scss)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1188,7 +1188,7 @@
       "begin": "(```)(perl6)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1215,7 +1215,7 @@
       "begin": "(```)(powershell)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1242,7 +1242,7 @@
       "begin": "(```)(rust)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1269,7 +1269,7 @@
       "begin": "(```)(scala)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1296,7 +1296,7 @@
       "begin": "(```)(shellscript)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1323,7 +1323,7 @@
       "begin": "(```)(typescriptreact|tsx)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1350,7 +1350,7 @@
       "begin": "(```)(csharp|cs)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {
@@ -1377,7 +1377,7 @@
       "begin": "(```)(fsharp|fs)(.*?)$",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.begin.html" },
-        "2": { "name": "entity.name.tag.html" },
+        "2": { "name": "fenced_code.block.language" },
         "3": {
           "patterns": [
             {

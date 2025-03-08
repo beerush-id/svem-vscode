@@ -41,6 +41,15 @@ const SELF_CLOSING_TAGS = [
   "wbr",
 ];
 
+const AUTO_CLOSE_PRE_WHITELIST = ["/", "="];
+
+const canAutoClose = (char) => {
+  return (
+    !AUTO_CLOSE_PRE_WHITELIST.some((pre) => char.endsWith(pre)) &&
+    !/<\/[a-zA-Z0-9_]+$/.test(char)
+  );
+};
+
 function handleDocumentChange(event) {
   const editor = vscode.window.activeTextEditor;
 
@@ -56,7 +65,7 @@ function handleDocumentChange(event) {
       const textBefore = getClosestOpenTag(lineText);
 
       // Skip if the tag is self-closing or already closed.
-      if (textBefore.endsWith("/") || /<\/[a-zA-Z0-9_]+$/.test(textBefore)) {
+      if (!canAutoClose(textBefore)) {
         return;
       }
 

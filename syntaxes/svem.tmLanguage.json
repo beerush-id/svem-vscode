@@ -24,6 +24,9 @@
         },
         {
           "include": "#html"
+        },
+        {
+          "include": "#interpolation"
         }
       ]
     },
@@ -46,10 +49,10 @@
     "svelte": {
       "patterns": [
         {
-          "include": "#svelte-module"
+          "include": "#svelte-typescript"
         },
         {
-          "include": "#svelte-script"
+          "include": "#svelte-javascript"
         },
         {
           "include": "#svelte-tag"
@@ -146,11 +149,11 @@
         }
       }
     },
-    "svelte-module": {
+    "svelte-typescript": {
       "name": "meta.module.svem",
       "patterns": [
         {
-          "begin": "(<)(script)(\\s+lang=[\"']ts[\"'])(>)$",
+          "begin": "(<)(script)(\\s+lang=[\"']ts[\"'][^>]*)(>)$",
           "beginCaptures": {
             "1": {
               "name": "punctuation.definition.tag.begin.html"
@@ -186,7 +189,7 @@
         }
       ]
     },
-    "svelte-script": {
+    "svelte-javascript": {
       "name": "meta.script.svem",
       "patterns": [
         {
