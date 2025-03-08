@@ -3,7 +3,7 @@
   "icon": "icons/svem-icon.png",
   "displayName": "Svem for VS Code",
   "description": "Language support for Svem (Svelte in Markdown).",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "Beerush",
   "author": "Nanang Mahdaen El Agung <mahdaen@gmail.com>",
   "engines": {
